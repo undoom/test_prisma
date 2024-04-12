@@ -1,0 +1,369 @@
+:root {
+  --white: #fff;
+  --grey-footer: #9b9b9b;
+  --background-footer: #181818;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  background: url(../images/header-bg.png);
+  background-image: -webkit-image-set(url(../images/header-bg.png) 1x, url(../images/header-bg-2x.png) 2x);
+  background-image: image-set(url(../images/header-bg.png) 1x, url(../images/header-bg-2x.png) 2x);
+  position: relative;
+  background-position: 50% 50%;
+  height: 400px;
+}
+@media screen and (min-width: 991px) {
+  header {
+    height: 500px;
+  }
+}
+header .logo {
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@media screen and (min-width: 991px) {
+  header .logo {
+    background-position: 50% 70%;
+    background-size: auto auto;
+  }
+}
+header nav {
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+  background: url(../images/header-bg.png) no-repeat;
+  background-size: auto auto;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+@media screen and (min-width: 991px) {
+  header nav {
+    padding-right: 15px;
+    background: none;
+    position: static;
+  }
+}
+header nav .button-container {
+  text-align: right;
+  padding: 20px;
+}
+header nav .button-container button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+@media screen and (min-width: 991px) {
+  header nav .button-container button {
+    display: none;
+  }
+}
+header nav .button-container button img.visible-active {
+  display: none;
+}
+header nav.active .button-container {
+  text-align: left;
+}
+header nav.active .button-container button img.visible-active {
+  display: initial;
+}
+header nav.active .button-container button img.visible-inactive {
+  display: none;
+}
+header nav ul {
+  margin: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 991px) {
+  header nav ul {
+    max-height: none;
+    flex-direction: row;
+    padding: 0;
+    height: auto;
+    justify-content: center;
+  }
+}
+header nav ul li {
+  text-align: center;
+}
+header nav ul li a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+@media screen and (min-width: 991px) {
+  header nav ul li a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  header nav ul li {
+    text-align: left;
+  }
+}
+header nav.active {
+  background-size: auto 100%;
+}
+header nav.active ul {
+  height: 100vh;
+}
+
+.banner.killoren {
+  background: url(../images/kiloren.jpg) no-repeat 50% 50%;
+  background-image: -webkit-image-set(url(../images/kiloren.jpg) 1x, url(../images/kiloren-2x.jpg) 2x);
+  background-image: image-set(url(../images/kiloren.jpg) 1x, url(../images/kiloren-2x.jpg) 2x);
+  height: 400px;
+}
+@media screen and (min-width: 991px) {
+  .banner.killoren {
+    background-size: 100% auto;
+    height: 500px;
+  }
+}
+.banner.stormtroopers {
+  background: url(../images/stormtroopers.jpg) no-repeat 50% 50%;
+  background-image: -webkit-image-set(url(../images/stormtroopers.jpg) 1x, url(../images/stormtroopers-2x.jpg) 2x);
+  background-image: image-set(url(../images/stormtroopers.jpg) 1x, url(../images/stormtroopers-2x.jpg) 2x);
+  height: 250px;
+}
+@media screen and (min-width: 991px) {
+  .banner.stormtroopers {
+    background-size: 100% auto;
+  }
+}
+
+.first-section {
+  padding: 35px 35px 150px;
+}
+@media screen and (min-width: 991px) {
+  .first-section {
+    padding: 100px 185px 195px 120px;
+    display: flex;
+  }
+}
+.first-section section {
+  text-align: center;
+}
+.first-section section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.first-section section p {
+  font-size: 1.8rem;
+}
+.first-section section p + p {
+  margin-top: 25px;
+}
+.first-section section .underline {
+  text-decoration: underline;
+}
+@media screen and (min-width: 991px) {
+  .first-section section {
+    text-align: left;
+    margin-right: 80px;
+  }
+}
+.first-section aside {
+  display: none;
+}
+@media screen and (min-width: 991px) {
+  .first-section aside {
+    display: block;
+    position: relative;
+  }
+}
+
+.second-section {
+  padding: 40px 40px 30px;
+}
+@media screen and (min-width: 991px) {
+  .second-section {
+    padding: 65px 120px 75px;
+  }
+}
+.second-section section {
+  clear: both;
+}
+.second-section section h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 43px;
+  line-height: 0.7;
+}
+@media screen and (min-width: 991px) {
+  .second-section section h2 {
+    line-height: normal;
+  }
+}
+.second-section section .img-left img {
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 991px) {
+  .second-section section .img-left img {
+    float: left;
+    margin-right: 20px;
+  }
+}
+.second-section section .img-left p {
+  vertical-align: top;
+}
+.second-section section .img-left ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.second-section section .img-left strong {
+  font-style: italic;
+}
+.second-section section .img-left::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+footer {
+  background: url(../images/darthvader.jpg) 50% 50% no-repeat;
+  background-color: var(--background-footer);
+  background-image: -webkit-image-set(url(../images/darthvader.jpg) 1x, url(../images/darthvader_2x.jpg) 2x);
+  background-image: image-set(url(../images/darthvader.jpg) 1x, url(../images/darthvader_2x.jpg) 2x);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  padding: 40px 0;
+  color: var(--grey-footer);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (min-width: 991px) {
+  footer {
+    padding: 65px 125px 70px 155px;
+  }
+}
+footer .copyright {
+  display: none;
+}
+@media screen and (min-width: 991px) {
+  footer .copyright {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 45px;
+  }
+}
+footer nav {
+  font-size: 1.2rem;
+  flex-basis: 50%;
+}
+@media screen and (min-width: 991px) {
+  footer nav {
+    flex-basis: auto;
+  }
+}
+footer nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer nav ul li {
+  text-align: center;
+}
+footer nav ul li + li {
+  margin-top: 20px;
+}
+footer nav ul li a {
+  color: inherit;
+}
+@media screen and (min-width: 991px) {
+  footer nav ul li {
+    text-align: left;
+  }
+}
+footer nav.secondary li {
+  text-align: center;
+}
+footer .socials {
+  flex-basis: 100%;
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+}
+@media screen and (min-width: 991px) {
+  footer .socials {
+    margin-top: 0;
+    display: block;
+  }
+}
+footer .socials h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  flex-basis: 50%;
+}
+@media screen and (min-width: 991px) {
+  footer .socials h3 {
+    flex-basis: auto;
+  }
+}
+footer .socials ul {
+  flex-basis: 50%;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+@media screen and (min-width: 991px) {
+  footer .socials ul {
+    flex-basis: auto;
+  }
+}
+footer .socials ul li {
+  display: inline-block;
+}
+footer .socials ul li + li {
+  margin-left: 20px;
+}
+@media screen and (min-width: 991px) {
+  footer .socials {
+    flex-basis: auto;
+    text-align: right;
+  }
+}/*# sourceMappingURL=style.css.map */
