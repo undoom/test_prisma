@@ -1,7 +1,10 @@
 function initMenuToggle() {
     const toggles = document.querySelectorAll(".menu-toggle");
 
-    if (toggles) { return; }
+    console.log(toggles);
+
+    if (!toggles) { return; }
+
 
     toggles.forEach((toggle) => {
         toggle.addEventListener("click", function () {
