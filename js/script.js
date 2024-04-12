@@ -54,19 +54,22 @@ class Parallax {
 class keepInViewport {
     constructor(element) {
         this.element = element;
+        this.elementInner = element.querySelector(".ads-inner");
+        if (!this.elementInner) {
+            this.elementInner = this.element;
+        }
         this.container = this.element.parentNode;
         this.topPosition = 0;
 
         let elementComputedStyles = window.getComputedStyle(this.container);
         this.initialPadding = parseInt(elementComputedStyles.getPropertyValue("padding-top"), 10);
-        this.maxTop = this.container.getBoundingClientRect().height - this.element.getBoundingClientRect().height - this.initialPadding;
+        this.maxTop = this.container.getBoundingClientRect().height - this.elementInner.getBoundingClientRect().height - this.initialPadding;
 
         const throttledKeepInView = throttle(() => this.keepInView(), 10);
         window.addEventListener('scroll', throttledKeepInView);
     }
 
     keepInView() {
-        console.log(this.container.getBoundingClientRect().top);
         if (this.container.getBoundingClientRect().top + this.initialPadding < 0) {
             this.topPosition = -(this.container.getBoundingClientRect().top + this.initialPadding)
             if (this.topPosition < this.maxTop) {
